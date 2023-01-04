@@ -1,0 +1,17 @@
+version: "3"
+services:
+  nextcloud:
+    image: nextcloud
+    container_name: nextcloud
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Chicago
+      - OVERWRITECLIURL=https://nextcloud.mydomail.com
+      - OVERWRITEPROTOCOL=https
+    volumes:
+      - ./data:/var/www/html
+    restart: unless-stopped
+    ports:
+    - 127.0.0.1:8380:80   
+  
