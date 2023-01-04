@@ -7,6 +7,7 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=America/Chicago
+      - OVERWRITECLIURL=${server_address} # is https://sub.domain.tld
       - OVERWRITEPROTOCOL=https
     volumes:
       - ./data:/var/www/html
