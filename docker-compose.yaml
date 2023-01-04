@@ -7,7 +7,6 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=America/Chicago
-      - OVERWRITECLIURL=https://nextcloud.mydomail.com
       - OVERWRITEPROTOCOL=https
     volumes:
       - ./data:/var/www/html
