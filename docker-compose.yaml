@@ -10,8 +10,10 @@ services:
       - OVERWRITECLIURL=${server_address} # is https://sub.domain.tld
       - OVERWRITEPROTOCOL=https
     volumes:
-      - ./data:/var/www/html
+      # - ./data:/var/www/html
+      - nextcloud:/var/www/html
     restart: unless-stopped
     ports:
     - 127.0.0.1:8380:80   
-  
+volumes:
+  nextcloud:   
